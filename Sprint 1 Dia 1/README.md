@@ -34,3 +34,5 @@ Uma boa organização é fundamental para o sucesso de qualquer trabalho, lembra
 
 ## ReadMe
 Arquivos Markdown nomeados de "ReadMe" são um consenso na comunidade de desenvolvimento, pois nele estão guardadas informações relevantes do projeto como licenças, explicações sobre ferramentas usadas no projeto, como usar o projeto, qual o objetivo dele, entre outros. Fazer um bom ReadMe é fundamental para o entendimento de projetos por outros desenvolvedores ou por pessoas que não tem conhecimento na área.
+
+![Rodapé](img/readMeImg/rodape.png)

@@ -144,3 +144,5 @@ O [Manifesto Ágil](https://agilemanifesto.org/iso/ptbr/manifesto.html) Foi um e
 2. Software funcionando é melhor que documentação abrangente;
 3. Colaboração com o cliente acima de negociação de contratos;
 4. Responder a mudanças ao invés de seguir um plano.
+
+![Rodapé](img/readMeImg/rodape.png)

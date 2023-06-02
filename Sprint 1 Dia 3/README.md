@@ -63,3 +63,5 @@ Esse método funciona com o Scrum, nele o product backlog é separado em Epics, 
 >>> É a necessidade que uma função precisa.
 
 Assim vemos que um épico é formado por várias funcionalidades que são formadas por várias histórias. É recomendado apresentar o que já se tem uma base em uma Sprint Review, pois assim o cliente ou o PO tem mais interesse no projeto.
+
+![Rodapé](img/readMeImg/rodape.png)

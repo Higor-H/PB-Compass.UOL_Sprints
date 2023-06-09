@@ -1,4 +1,4 @@
-![Sprint 2, dia 2](img/readMeImg/S2d2Banner.png)
+![Sprint 2, dia 2](img/readMeImg/S2d2Banner.svg)
 
 
 # Sprint 2

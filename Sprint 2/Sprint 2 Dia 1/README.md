@@ -1,4 +1,4 @@
-![Sprint 2, dia 1](img/readMeImg/S2d1Banner.png)
+![Sprint 2, dia 1](img/readMeImg/S2d1Banner.svg)
 
 
 # Sprint 2
@@ -59,25 +59,25 @@ Os status code de uma API REST é uma informação preciosa para entender como a
 
 Códigos específicos de REST:
 
-200 (OK)
-201 (Created)
-202 (Accepted)
-204 (No Content)
-301 (Moved Permanently)
-302 (Found)
-303 (See Other)
-304 (Not Modified)
-307 (Temporary Redirect)
-400 (Bad Request)
-401 (Unauthorized)
-403 (Forbidden)
-404 (Not Found)
-405 (Method Not Allowed)
-406 (Not Acceptable)
-412 (Precondition Failed)
-415 (Unsupported Media Type)
-500 (Internal Server Error)
-501 (Not Implemented)
+- 200 (OK)
+- 201 (Created)
+- 202 (Accepted)
+- 204 (No Content)
+- 301 (Moved Permanently)
+- 302 (Found)
+- 303 (See Other)
+- 304 (Not Modified)
+- 307 (Temporary Redirect)
+- 400 (Bad Request)
+- 401 (Unauthorized)
+- 403 (Forbidden)
+- 404 (Not Found)
+- 405 (Method Not Allowed)
+- 406 (Not Acceptable)
+- 412 (Precondition Failed)
+- 415 (Unsupported Media Type)
+- 500 (Internal Server Error)
+- 501 (Not Implemented)
 
 
 ![Rodapé](img/readMeImg/rodape.png)

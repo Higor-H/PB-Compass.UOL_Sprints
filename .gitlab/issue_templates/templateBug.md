@@ -1,4 +1,4 @@
-# Problema Encontrado
+# Problema Encontrado - Titulo -
 ## RESUMO
 Foi testado a regra :
 Com base na User Storie foi testado o {login/exemplo/65656565}
@@ -11,6 +11,10 @@ Porém o resultado obtido foi de {X se comportou como Y}
 | X se comporta como X  | X se comporta como Y  |
 | X não pode mudar o seu valor  |  X não pode mudar o seu valor  |
 
+### Pessoas que testaram
+| Pessoas |
+| --- |
+| Higor Milani |
 
 ## O test foi realizado da seguinte forma:
 { -EXEMPLO-
@@ -59,14 +63,5 @@ Body = none
 ## Notas e observações:
 {a1b2c3d4e5f6g7h8}
 
-
-
-
-
-
-
-
-## Passo a passo para reproduzir
-
-
-{abcdefghijklmnopqrstuvwxyx}
+## Evidencias
+(imagem)

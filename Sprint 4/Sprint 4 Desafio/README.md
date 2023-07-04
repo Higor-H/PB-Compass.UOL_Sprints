@@ -1,5 +1,6 @@
 #  - Plano de Testes Sprint 3 [SeverRest] Usuários, Login e Produtos - ![compass.svg](/uploads/217944039619357e305958145c080112/compass.svg)
 
+TER O CICLO DE TESTES
 
 # US 001: [API] Usuários
 ------

@@ -1,6 +1,4 @@
-#  - Plano de Testes Sprint 3 [SeverRest] Usuários, Login e Produtos - ![compass.svg](/uploads/217944039619357e305958145c080112/compass.svg)
-
-TER O CICLO DE TESTES
+#  - Plano de Testes Sprint 3 [SeverRest] Usuários, Login, Produtos e Carrinho - ![compass.svg](/uploads/217944039619357e305958145c080112/compass.svg)
 
 # US 001: [API] Usuários
 ------
@@ -34,9 +32,9 @@ CTUxRx_xxx (Caso de Teste User Storie X, Regra X, xxx número do teste)
 - CTU1R1_002 Teste com um ou mais dados ausentes
 - CTU1R1_003 Teste com um ou mais dados vazios
 - CTU1R1_004 Teste com tipo de dado errado
-- CTU1R1_005 Teste com maximo e minimo de caracteres permitidos
+- CTU1R1_005 Teste com máximo e mínimo de caracteres permitidos
 - CTU1R1_006 Teste com dados com espaço em branco
-- CTU1R1_007 Teste com dado com caracter especial/invalido
+- CTU1R1_007 Teste com dado com caractere especial/invalido
 - CTU1R1_008 Teste com dados "nome" sendo apenas números
 - CTU1R1_009 Teste com dado de administrador
 
@@ -82,18 +80,19 @@ CTUxRx_xxx (Caso de Teste User Storie X, Regra X, xxx número do teste)
 - CTU1R8_038 Teste cadastrando usuário via POST e PUT com email com caracteres especiais/inválidos
 - CTU1R8_039 Teste cadastrando usuário via POST e PUT com email com excesso de caracteres aceitos
 - CTU1R8_040 Teste cadastrando usuário via POST e PUT com email com o mínimo de caracteres aceitos
-- CTU1R8_041 Teste cadastrando usuário via POST e PUT com email com excesso de caracteres aceitos
-- CTU1R8_042 Teste alterando email já cadastrado via PUT para um email invalido.
+- CTU1R8_041 Teste alterando email já cadastrado via PUT para um email invalido.
+
 
 ### R9
-- CTU1R9_043 Teste cadastrando senha via POST e PUT válida
-- CTU1R9_044 Teste cadastrando senha via POST e PUT sem senha
-- CTU1R9_045 Teste cadastrando senha via POST e PUT com senha sem valor
-- CTU1R9_046 Teste cadastrando senha via POST e PUT com senha em branco
-- CTU1R9_047 Teste cadastrando senha via POST e PUT com caracteres especiais/inválidos
-- CTU1R9_048 Teste cadastrando senha via POST e PUT com mais de 30 caracteres
-- CTU1R9_049 Teste cadastrando senha via POST e PUT com menos de 5 caracteres
-- CTU1R9_050 Teste alterando senha válida via PUT para uma senha inválida
+- CTU1R9_042 Teste cadastrando senha via POST e PUT válida
+- CTU1R9_043 Teste cadastrando senha via POST e PUT sem senha
+- CTU1R9_044 Teste cadastrando senha via POST e PUT com senha sem valor
+- CTU1R9_045 Teste cadastrando senha via POST e PUT com senha em branco
+- CTU1R9_046 Teste cadastrando senha via POST e PUT com caracteres especiais/inválidos
+- CTU1R9_047 Teste cadastrando senha via POST e PUT com mais de 30 caracteres
+- CTU1R9_048 Teste cadastrando senha via POST e PUT com menos de 5 caracteres
+- CTU1R9_049 Teste alterando senha válida via PUT para uma senha inválida
+
 
 (Mais testes que não estão no plano podem ser realizados dependendo do estado da aplicação)
 
@@ -177,14 +176,13 @@ CTUxRx_xxx (Caso de Teste, User Storie X, Regra X, xxx número do teste)
 - CTU3R1_002 Testar o GET em um produto com um usuário não autenticado
 - CTU3R1_003 Testar o GET com query em um produto com um usuário não autenticado
 - CTU3R1_004 Testar o GET{id} em um produto com um usuário não autenticado
-- CTU3R1_005 Testar o POST em um produto com um usuário não autenticado
-- CTU3R1_006 Testar o DELETE em um produto com um usuário não autenticado
-- CTU3R1_007 Testar o PUT em um produto com um usuário não autenticado
-
+- CTU3R1_005 Testar o POST em um produto com um usuário não autenticado    
+- CTU3R1_006 Testar o DELETE em um produto com um usuário não autenticado  
+- CTU3R1_007 Testar o PUT em um produto com um usuário não autenticado      
 ### R2
 
-- CTU3R2_001 tentar cadastrar produto sem nome repetido
-- CTU3R2_002 Tentar cadastrar um produto com nome repetido via POST
+- CTU3R2_001 tentar cadastrar produto sem nome repetido  
+- CTU3R2_002 Tentar cadastrar um produto com nome repetido via POST  
 - CTU3R2_003 Tentar cadastrar um produto com nome repetido via PUT
 - CTU3R2_004 Tentar alterar um produto e colocar um nome repetido nele com PUT
 
@@ -192,17 +190,87 @@ CTUxRx_xxx (Caso de Teste, User Storie X, Regra X, xxx número do teste)
 
 - CTU3R3_001 Tentar excluir um produto fora do carrinho
 - CTU3R3_002 Tentar excluir um produto dentro do carrinho (Cadastrar carrinho, adicionar o produto a ser testado e tentar excluí-lo)
-- CTU3R3_003 Tentar excluir um produto fora do carrinho
+- CTU3R3_003 Tentar excluir um produto fora do carrinho apos compra cancelada ou concluida
+
 
 ### R4
 
 - CTU3R4_001 Tentar atualizar um produto via PUT
-- CTU3R4_002 Tentar criar um produto ainda não cadastrado via PUT
+- CTU3R4_002 Tentar criar um produto ainda não cadastrado via PUT  
 - CTU3R4_003 Tentar criar um produto ainda não cadastrado via PUT query
 
 ### R5
 
 - CTU3R5_001 Tentar cadastrar um produto com nome repetido via PUT
+
+
+# US 004: [API] Carrinho
+------
+"Sendo um vendedor cadastrado eu gostaria de poder me autenticar no Marketplace do ServeRest para que eu possa criar, consultar, concluir e cancelar minhas compras."
+
+## RESUMO
+No contexto de funcionalidades da API "SeverRest  v2.26.11", principalmente na parte de Carrinhos, é necessário que as seguintes regras sejam funcionais.
+
+1. Deve ser possível buscar carrinhos tanto por via query como via path
+2. Não deve ser possível realizar um PUT em um carrinho
+3. Apenas usuários autenticados e logados podem criar seu carrinho
+4. Não deve ser possível criar mais de um carrinho por usuário
+5. O carrinho não pode possuir produto duplicado, inexistente ou com quantidade insuficiente.
+6. Quando um produto é adicionado em um carrinho deve haver uma diminuição na mesma quantidade no cadastro do produto
+7. Só se pode excluir o carrinho ao concluir uma compra ou ao cancelar uma compra
+8. Não se pode deletar o carrinho de usuários não logados
+9. Ao cancelar uma compra, a quantidade de produtos que estavam no carrinho devem voltar para o cadastro do produto e ao concluir uma compra não se deve voltar.
+10. Os testes executados deverão conter evidências
+11. A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos
+
+
+## Caso de testes US 004 ![test.svg](/uploads/fd41e63fe3e35b359609782a377bb8b9/test.svg)
+
+CTUxRx_xxx (Caso de Teste, User Storie X, Regra X, xxx número do teste)
+
+### R1
+
+- CTU4R1_001 Testar a o GET em carrinhos usando path {_id}
+- CTU4R1_002 Testar a o GET em carrinhos usando path com outro valor sem ser ID
+- CTU4R1_001 Testar a o GET em carrinhos usando query com _id, precoTotal, quantidadeTotal ou idUsuario
+- CTU4R1_001 Testar a o GET em carrinhos sem passar nenhum valor ou caminho --- É possível dar um get sem estar autenticado, e ver o que os outros usuários estão comprando. MELHORIA  
+
+### R2
+- CTU4R2_001 Testar alterar as informações do carrinho via PUT
+- CTU4R2_001 Testar alterar as informações do carrinho via PUT com path ou query id
+
+### R3
+- CTU4R3_001 Testar criar um carrinho sem estar logado
+- CTU4R3_001 Testar criar um carrinho com um tokem expirado
+- CTU4R3_001 Testar criar um carrinho com um usuário autenticado
+
+### R4
+- CTU4R4_001 Testar criar um carrinho em um usuário que já possui um carrinho
+
+### 5
+- CTU4R5_001 Testar criar um carrinho com produto duplicado
+- CTU4R5_001 Testar criar um carrinho com produto inexistente
+- CTU4R5_001 Testar criar um carrinho com produto quantidade insuficiente
+
+### 6
+- CTU4R6_001 Testar criar um carrinho com produto tendo uma quantidade válida e verificar com GET em produtos
+- CTU4R6_001 Testar criar um carrinho com produto tendo uma quantidade acima da cadastrada verificar com GET em produtos
+- CTU4R6_001 Testar criar um carrinho com produto tendo a mesma quantidade do cadastro verificar com GET em produtos
+- CTU4R6_001 Testar criar um carrinho com produto tendo a quantidade 0 e  verificar com GET em produtos
+
+### 7
+- CTU4R7_001 Testar excluir um carrinho sem usar os caminhos "/concluir-compra" e "/cancelar-compra"
+- CTU4R7_001 Testar excluir um carrinho usando query idcarrinho
+- CTU4R7_001 Testar excluir um carrinho usando path idcarrinho
+
+### 8
+- CTU4R8_001 Testar excluir um carrinho pelo path "/concluir-compra" sem estar logado
+- CTU4R8_001 Testar excluir um carrinho pelo path "/cancelar-compra" sem estar logado
+
+### 9
+- CTU4R9_001 Testar cancelar um carrinho com produto tendo uma quantidade válida e verificar com GET em produtos
+- CTU4R9_001 Testar após concluir a compra se a quantidade de produtos no cadastro continua igual e que não tenha aumentado.
+- CTU4R6_001 Testar criar um carrinho com produto tendo a quantidade 0 e  verificar com PUT em produtos
 
 
 ## Testes candidatos a automação ![automação.svg](/uploads/b6cedbe066a9ca4267da2df9467d08f6/automação.svg)
@@ -283,6 +351,13 @@ US 003: [API] Produtos
 - API de autenticação implementada;
 - Ambiente de testes disponibilizado.
 
+US 004: [API] Carrinho
+- Banco de dados e infraestrutura para desenvolvimento disponibilizados;
+- API de cadastro de usuários implementada;
+- API de autenticação implementada;
+- API de Cadastro, alteração e exclusão de produtos implementada;
+- Ambiente de testes disponibilizado.
+
 
 ## DoD
 
@@ -301,6 +376,13 @@ US 002: [API] Login
 US 003: [API] Produtos
 - CRUD de cadastro de Produtos implementado (CRIAR, ATUALIZAR, LISTAR E DELETAR);
 - Análise de testes cobrindo a rota de produtos;
+- Matriz de rastreabilidade atualizada;
+- Automação de testes baseado na análise realizada;
+
+US 004: [API] Carrinho
+
+- CRUD de carrinhos implementado (CRIAR, LISTAR E DELETAR(Concluir e cancelar compra));
+- Análise de testes cobrindo todos verbos;
 - Matriz de rastreabilidade atualizada;
 - Automação de testes baseado na análise realizada;
 
@@ -332,6 +414,7 @@ US 003: [API] Produtos
 ### Versão da aplicação
 
 * ServeRest v2.26.11
+* ServeRest v2.26.13 (Atualizada depois de 16/07/2023)
 
 
 ![fututre.svg](/uploads/855ce7c4249236fae104ced55d70cd8a/fututre.svg)

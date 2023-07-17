@@ -247,27 +247,27 @@ CTUxRx_xxx (Caso de Teste, User Storie X, Regra X, xxx número do teste)
 ### R4
 - CTU4R4_001 Testar criar um carrinho em um usuário que já possui um carrinho
 
-### 5
+### R5
 - CTU4R5_001 Testar criar um carrinho com produto duplicado
 - CTU4R5_001 Testar criar um carrinho com produto inexistente
 - CTU4R5_001 Testar criar um carrinho com produto quantidade insuficiente
 
-### 6
+### R6
 - CTU4R6_001 Testar criar um carrinho com produto tendo uma quantidade válida e verificar com GET em produtos
 - CTU4R6_001 Testar criar um carrinho com produto tendo uma quantidade acima da cadastrada verificar com GET em produtos
 - CTU4R6_001 Testar criar um carrinho com produto tendo a mesma quantidade do cadastro verificar com GET em produtos
 - CTU4R6_001 Testar criar um carrinho com produto tendo a quantidade 0 e  verificar com GET em produtos
 
-### 7
+### R7
 - CTU4R7_001 Testar excluir um carrinho sem usar os caminhos "/concluir-compra" e "/cancelar-compra"
 - CTU4R7_001 Testar excluir um carrinho usando query idcarrinho
 - CTU4R7_001 Testar excluir um carrinho usando path idcarrinho
 
-### 8
+### R8
 - CTU4R8_001 Testar excluir um carrinho pelo path "/concluir-compra" sem estar logado
 - CTU4R8_001 Testar excluir um carrinho pelo path "/cancelar-compra" sem estar logado
 
-### 9
+### R9
 - CTU4R9_001 Testar cancelar um carrinho com produto tendo uma quantidade válida e verificar com GET em produtos
 - CTU4R9_001 Testar após concluir a compra se a quantidade de produtos no cadastro continua igual e que não tenha aumentado.
 - CTU4R6_001 Testar criar um carrinho com produto tendo a quantidade 0 e  verificar com PUT em produtos
@@ -321,6 +321,35 @@ Esses testes são os que mais se repetem no processo de teste da aplicação, po
 ---
 - CTU3R5_001 Tentar cadastrar um produto com nome repetido via PUT
 
+### US4
+
+- CTU4R1_001 Testar a o GET em carrinhos usando path {_id}
+- CTU4R1_001 Testar a o GET em carrinhos usando query com _id, precoTotal, quantidadeTotal ou idUsuario
+---
+- CTU4R2_001 Testar alterar as informações do carrinho via PUT
+- CTU4R2_001 Testar alterar as informações do carrinho via PUT com path ou query id
+---
+- CTU4R3_001 Testar criar um carrinho sem estar logado
+- CTU4R3_001 Testar criar um carrinho com um tokem expirado
+- CTU4R3_001 Testar criar um carrinho com um usuário autenticado
+---
+- CTU4R4_001 Testar criar um carrinho em um usuário que já possui um carrinho
+---
+- CTU4R5_001 Testar criar um carrinho com produto duplicado
+- CTU4R5_001 Testar criar um carrinho com produto inexistente
+- CTU4R5_001 Testar criar um carrinho com produto quantidade insuficiente
+---
+- CTU4R6_001 Testar criar um carrinho com produto tendo uma quantidade acima da cadastrada verificar com GET em produtos
+---
+- CTU4R7_001 Testar excluir um carrinho sem usar os caminhos "/concluir-compra" e "/cancelar-compra"
+---
+- CTU4R8_001 Testar excluir um carrinho pelo path "/concluir-compra" sem estar logado
+- CTU4R8_001 Testar excluir um carrinho pelo path "/cancelar-compra" sem estar logado
+---
+- CTU4R9_001 Testar cancelar um carrinho com produto tendo uma quantidade válida e verificar com GET em produtos
+- CTU4R9_001 Testar após concluir a compra se a quantidade de produtos no cadastro continua igual e que não tenha aumentado.
+- CTU4R6_001 Testar criar um carrinho com produto tendo a quantidade 0 e  verificar com PUT em produtos
+---
 
 ## Escopo:
 
